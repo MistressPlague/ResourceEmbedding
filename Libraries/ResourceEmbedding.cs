@@ -36,7 +36,7 @@ namespace ResourceEmbedding
 
         internal static void CopyTo(Stream input, Stream output)
         {
-            var buffer = new byte[16 * 1024]; // Fairly arbitrary size
+            var buffer = new byte[16384];
             int bytesRead;
 
             while ((bytesRead = input.Read(buffer, 0, buffer.Length)) > 0)
