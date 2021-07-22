@@ -10,7 +10,7 @@ namespace ResourceEmbedding
         {
             foreach (string resourceName in Assembly.GetExecutingAssembly().GetManifestResourceNames())
             {
-                if (resourceName == FolderName)
+                if (resourceName.Contains("." + FolderName + "."))
                 {
                     if (FileExtensionsToWrite.Any(o => resourceName.EndsWith(o)))
                     {
